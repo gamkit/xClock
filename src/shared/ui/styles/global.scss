@@ -1,0 +1,16 @@
+@import "normalize.css";
+
+body {
+  margin: 0;
+  font-family: $font-family-primary, sans-serif;
+  font-size: $font-size-s;
+  color: $color-primary-black;
+  background-color: #fff;
+}
+
+.base-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}

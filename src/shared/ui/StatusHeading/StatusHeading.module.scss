@@ -1,0 +1,22 @@
+.status-heading {
+  font-weight: $font-primary-bold;
+  margin: 12px 0;
+  text-align: center;
+  gap: 140px;
+}
+
+.status-heading--active {
+  color: $color-primary-red;
+}
+
+.status-heading--starting {
+  color: $color-primary-gray;
+}
+
+.status-heading--size-sm {
+  font-size: $font-size-l;
+}
+
+.status-heading--size-lg {
+  font-size: $font-size-xxl;
+}
