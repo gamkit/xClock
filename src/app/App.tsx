@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import HomePage from "../pages/home";
-import TimerPage from "../pages/timer";
-import StopwatchPage from "../pages/stopwatch";
+import HomePage from "@/pages/home";
+import TimerPage from "@/pages/timer";
+import StopwatchPage from "@/pages/stopwatch";
 
 function App() {
   return (

@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  background-color: v.$color-primary-white;
+  box-shadow: v.$box-shadow;
+  width: 912px;
+  height: 432px;
+  border: 12px solid v.$color-primary-gray;
+  border-radius: v.$outer-block-radius;
+}
