@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  background-color: $color-primary-white;
+  box-shadow: $box-shadow;
+  width: 912px;
+  height: 432px;
+  border: 12px solid $color-primary-gray;
+  border-radius: $outer-block-radius;
+}

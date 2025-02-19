@@ -1,0 +1,10 @@
+.status-bar {
+    margin: 38px 0 140px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 78px;
+
+    > * {
+        margin: 0;
+    }
+}

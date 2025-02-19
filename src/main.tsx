@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
-import { withRedux } from "./app/providers/with-redux";
-import App from "./app/App";
-import "./app//styles/global.scss";
+import { withRedux } from "@/app/providers/with-redux";
+import App from "@/app/App";
+import '@/shared/ui/styles/global.scss'
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
