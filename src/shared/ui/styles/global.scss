@@ -8,9 +8,48 @@ body {
   background-color: #fff;
 }
 
-.base-container {
+.app-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
+}
+
+:root {
+  // Colors
+  --color-primary-white: #{$color-primary-white};
+  --color-secondary-white: #{$color-secondary-white};
+  --color-primary-gray: #{$color-primary-gray};
+  --color-primary-black: #{$color-primary-black};
+  --color-primary-red: #{$color-primary-red};
+  --color-secondary-red: #{$color-secondary-red};
+  --color-primary-green: #{$color-primary-green};
+
+  // Fonts
+  --font-family-primary: #{$font-family-primary};
+  --font-family-secondary: #{$font-family-secondary};
+
+  --font-size-xxl: #{$font-size-xxl};
+  --font-size-xl: #{$font-size-xl};
+  --font-size-l: #{$font-size-l};
+  --font-size-m: #{$font-size-m};
+  --font-size-s: #{$font-size-s};
+  --font-size-xs: #{$font-size-xs};
+
+  --font-primary-regular: #{$font-primary-regular};
+  --font-primary-medium: #{$font-primary-medium};
+  --font-primary-semi-bold: #{$font-primary-semi-bold};
+  --font-primary-bold: #{$font-primary-bold};
+
+  --font-secondary-regular: #{$font-secondary-regular};
+  --font-secondary-medium: #{$font-secondary-medium};
+  --font-secondary-semi-bold: #{$font-secondary-semi-bold};
+  --font-secondary-bold: #{$font-secondary-bold};
+
+  // Shadows
+  --box-shadow: #{$box-shadow};
+
+  // Border radius
+  --outer-block-radius: #{$outer-block-radius};
+  --component-radius: #{$component-radius};
 }

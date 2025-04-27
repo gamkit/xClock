@@ -1,0 +1,17 @@
+.burger-menu {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .burger-menu__list-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: inherit;
+    height: inherit;
+    padding: 0;
+    margin: 0;
+  }
+  

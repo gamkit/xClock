@@ -1,0 +1,125 @@
+.button {
+  display: flex;
+  font-family: $font-family-primary;
+  font-weight: $font-primary-semi-bold;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  line-height: 24px !important;
+  transition: 0.2s ease-in;
+  user-select: none;
+  box-shadow: 0px 2px 5px rgba(15, 15, 17, 0.15);
+
+  &:hover {
+    background-color: $color-primary-white;
+    color: $color-primary-black;
+    filter: brightness(110%);
+
+    & > svg {
+      fill: $color-primary-black;
+    }
+  }
+
+  &:active {
+    background-color: $color-primary-black;
+    color: $color-secondary-white;
+
+    & > svg {
+      fill: $color-secondary-white;
+    }
+  }
+}
+
+// Button types
+.button--type-action {
+  background-color: $color-secondary-white;
+  color: $color-primary-black;
+
+  & > svg {
+    fill: $color-primary-black;
+  }
+
+  &:disabled,
+  &[disabled] {
+    background-color: $color-primary-gray;
+    color: $color-secondary-white;
+
+    & > svg {
+      fill: $color-primary-gray;
+    }
+  }
+}
+
+.button--type-outline {
+  background-color: transparent;
+  color: $color-primary-black;
+  border: 1px solid $color-primary-black;
+
+  & > svg {
+    fill: $color-primary-black;
+  }
+
+  &:disabled,
+  &[disabled] {
+    background-color: transparent !important;
+    color: $color-primary-gray;
+    border: 1px solid $color-primary-gray;
+
+    & > svg {
+      fill: $color-primary-gray;
+    }
+  }
+}
+
+.button--type-ghost {
+  background-color: transparent;
+  color: $color-primary-black;
+  border: none;
+  box-shadow: none;
+
+  & > svg {
+    fill: $color-primary-black;
+  }
+
+  &:disabled,
+  &[disabled] {
+    background-color: transparent !important;
+    color: $color-primary-gray;
+    border: 1px solid $color-primary-gray;
+
+    & > svg {
+      fill: $color-primary-gray;
+    }
+  }
+}
+
+// Button sizes
+.button--size-sm {
+  padding: 3px 6px;
+  font-size: $font-size-xs;
+  border-radius: 6px;
+}
+
+.button--size-md {
+  padding: 6px 12px;
+  font-size: $font-size-s;
+  border-radius: 8px;
+}
+
+.button--size-lg {
+  padding: 10px 20px;
+  font-size: $font-size-s;
+  border-radius: 10px;
+}
+
+// Button states
+.button--rounded {
+  border-radius: 100%;
+}
+
+// Button states
+.button--loading {
+  opacity: 0.5;
+  pointer-events: none;
+}

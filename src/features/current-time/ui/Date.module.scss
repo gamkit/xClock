@@ -1,0 +1,9 @@
+.date {
+  font-size: $font-size-xl;
+  font-weight: $font-primary-bold;
+
+  > span {
+    color: $color-secondary-red;
+    opacity: 0.7;
+  }
+}

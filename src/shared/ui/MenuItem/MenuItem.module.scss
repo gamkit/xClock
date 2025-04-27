@@ -1,0 +1,45 @@
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 160px;
+    height: 110px;
+  }
+  
+  .menu-item__title {
+  }
+  
+  .menu-item__link-button {
+    width: 72px;
+    height: 72px;
+  
+    & > svg {
+      transform: scale(1.65);
+      transform-origin: center;
+    }
+  }
+  
+  .menu-item__title {
+    color: $color-primary-black;
+    text-decoration: none;
+    font-size: $font-size-m;
+    font-weight: $font-primary-bold;
+    margin: 0;
+  }
+  
+  .menu-item--active {
+    .menu-item__link-button {
+      background-color: $color-primary-red;
+  
+      & > svg {
+        fill: white;
+      }
+    }
+  
+    .menu-item__title {
+      color: $color-primary-red;
+    }
+  }
+  
