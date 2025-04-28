@@ -1,1 +1,1 @@
-export { CurrentTime } from "@/features/current-time/ui/CurrentTime";
+export { CurrentTime } from "./CurrentTime";

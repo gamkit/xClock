@@ -1,5 +1,6 @@
-.container {
+.frame-container {
   display: flex;
+  position: relative;
   background-color: $color-primary-white;
   box-shadow: $box-shadow;
   width: 912px;
