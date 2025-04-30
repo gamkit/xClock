@@ -3,6 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "keywords": [
+    "clock",
+    "timer",
+    "stopwatch",
+    "fsd"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -12,9 +18,11 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.5.1",
     "classnames": "^2.5.1",
+    "nanoid": "^5.1.5",
     "normalize.css": "^8.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-hook-form": "^7.56.3",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.1.5"
   },

@@ -1,0 +1,55 @@
+.btns-container {
+  display: flex;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+.btn-confirm {
+  background-color: $color-primary-green;
+  color: $color-secondary-white;
+}
+
+.btn-cancel {
+  background-color: $color-primary-red;
+  color: $color-secondary-white;
+}
+
+.slot-title {
+  font-size: $font-size-l;
+  color: $color-secondary-red;
+
+  > span {
+    color: $color-primary-black;
+  }
+}
+
+.fields-wrapper {
+  max-width: 300px;
+}
+
+.digit-fields {
+  margin-top: 12px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  input {
+    width: 72px;
+  }
+}
+
+.delimiter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  &::after,
+  &:before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    background-color: $color-primary-gray;
+    border-radius: 1px;
+  }
+}

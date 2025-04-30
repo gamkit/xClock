@@ -11,7 +11,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "@/shared/ui/styles/variables.scss" as *;`, // Глобальный импорт
+        additionalData: `@use "@/shared/ui/styles/variables.scss" as *;`, // global import in scss
       },
     },
   },

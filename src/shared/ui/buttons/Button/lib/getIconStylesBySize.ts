@@ -1,4 +1,4 @@
-import { TButtonSize } from "@/shared/ui/buttons/Button/types/types";
+import { TButtonSize } from "@/shared/ui/buttons/Button/types";
 import { CSSProperties } from "react";
 
 export const getIconStylesBySize = (
