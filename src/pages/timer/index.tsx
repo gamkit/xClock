@@ -1,7 +1,9 @@
+import { Timer } from "@/features/timer";
+
 const TimerPage = () => {
   return (
     <>
-      <h1>Timer Page is showing timers</h1>
+      <Timer />
     </>
   );
 };

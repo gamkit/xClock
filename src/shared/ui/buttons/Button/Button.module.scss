@@ -92,6 +92,14 @@
       fill: $color-primary-gray;
     }
   }
+
+  &:hover {
+    background-color: rgba($color: $color-primary-gray, $alpha: 0.1);
+
+    & > svg {
+      fill: $color-primary-gray;
+    }
+  }
 }
 
 // Button sizes

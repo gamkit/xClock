@@ -33,7 +33,7 @@
     .menu-item__link-button {
       background-color: $color-primary-red;
   
-      & > svg {
+      & > svg path {
         fill: white;
       }
     }

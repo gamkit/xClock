@@ -17,6 +17,7 @@ function App() {
           <Route path="/stopwatch" element={<StopwatchPage />} />
         </Routes>
       </AppFrame>
+      <div className="modals-portal"></div>
     </div>
   );
 }

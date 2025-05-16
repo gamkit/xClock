@@ -1,0 +1,15 @@
+.digit {
+  font-family: $font-family-secondary;
+  font-weight: $font-secondary-medium;
+  font-variant-numeric: tabular-nums;
+
+  &--size-lg {
+    font-size: 234px;
+  }
+
+  &--size-sm {
+    font-size: 154px;
+    width: 202px;
+    height: 177px;
+  }
+}

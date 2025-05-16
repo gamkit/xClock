@@ -1,0 +1,14 @@
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 31px;
+  width: 100%;
+}
+
+.slots {
+  align-self: flex-start;
+  margin-left: 36px;
+  width: 100%;
+}

@@ -1,19 +1,15 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from "react";
+import { ReactNode } from "react";
 import classNames from "classnames";
 import { Throbber } from "@/shared/ui";
 import { getIconStylesBySize } from "./lib/getIconStylesBySize";
-import { TButtonSize, TButtonType } from "./types/types";
+import { TBaseButtonProps, TButtonSize, TButtonType } from "./types";
 import styles from "./Button.module.scss";
 
-interface IButtonProps
-  extends DetailedHTMLProps<
-    ButtonHTMLAttributes<HTMLButtonElement>,
-    HTMLButtonElement
-  > {
+interface IButtonProps extends TBaseButtonProps {
   children?: ReactNode | ReactNode[] | undefined;
   size?: TButtonSize;
   bType?: TButtonType;
-  rounded?: boolean,
+  rounded?: boolean;
   Icon?: ReactNode;
   isLoading?: boolean;
   className?: string;

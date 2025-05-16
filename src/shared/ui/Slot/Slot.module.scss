@@ -1,0 +1,66 @@
+.slot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  width: 90px;
+  height: 48px;
+  background-color: $color-secondary-white;
+  border: 1px solid $color-primary-gray;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  user-select: none;
+  cursor: pointer;
+
+  &.slot--active {
+    background-color: $color-primary-black;
+
+    & > * {
+      color: $color-primary-white;
+    }
+  }
+
+  &:hover {
+    .slot-controls {
+      opacity: 1;
+    }
+  }
+}
+
+.slot-title {
+  font-size: $font-size-xs;
+  color: $color-secondary-red;
+  margin: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 76px;
+}
+
+.slot-value {
+  font-size: $font-size-s;
+  color: $color-primary-black;
+  margin: 0;
+}
+
+.slot-controls {
+  display: flex;
+  position: absolute;
+  opacity: 0;
+  top: -16px;
+  right: 0;
+  gap: 2px;
+  transition: opacity 0.2s ease-out;
+
+  button {
+    padding: 0;
+    font-size: 6px;
+    border: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid $color-primary-black;
+  }
+}

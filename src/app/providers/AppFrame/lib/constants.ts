@@ -1,4 +1,4 @@
-import { TMenuItem } from "@/shared/ui/MenuItem/types";
+import { TMenuItem } from "@/shared/ui/MenuItem";
 
 type TNavMenuItem = TMenuItem & {
     slug: string;

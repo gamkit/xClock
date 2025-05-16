@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { navigationActions } from "@/features/navigation";
+import { selectTimerStatus } from "@/features/timer/model/selector";
 import { useAppDispatch } from "@/shared/lib/redux/hooks";
+import { useAppSelector } from "@/shared/lib/redux/hooks";
 
 export const useBurgerMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const timerStatus = useAppSelector(selectTimerStatus);
   const navigate = useNavigate();
   const location = useLocation();
   const dispatch = useAppDispatch();
@@ -21,5 +24,11 @@ export const useBurgerMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
-  return { isMenuOpen, burgerClickHandler, menuItemClickHandler, location };
+  return {
+    isMenuOpen,
+    burgerClickHandler,
+    menuItemClickHandler,
+    location,
+    timerStatus,
+  };
 };
