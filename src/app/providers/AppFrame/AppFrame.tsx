@@ -23,7 +23,7 @@ export const AppFrame = ({ children }: { children: ReactNode }) => {
                 <MenuItem
                   key={link.id}
                   id={link.id}
-                  onClick={() => menuItemClickHandler(link.path, link.slug)}
+                  onClick={() => menuItemClickHandler(link.path)}
                   label={link.label}
                   isActive={location.pathname === link.path}
                   Icon={<Info />}

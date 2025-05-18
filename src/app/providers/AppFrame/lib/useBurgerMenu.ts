@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { navigationActions } from "@/features/navigation";
 import { selectTimerStatus } from "@/features/timer/model/selector";
-import { useAppDispatch } from "@/shared/lib/redux/hooks";
-import { useAppSelector } from "@/shared/lib/redux/hooks";
+import { useAppSelector, useAppDispatch } from "@/shared/lib";
+import { statusBarActions } from "@/features/status-bar/model/slice";
 
 export const useBurgerMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,13 +13,12 @@ export const useBurgerMenu = () => {
   const dispatch = useAppDispatch();
 
   const burgerClickHandler = () => {
-    dispatch(navigationActions.setScreen("menu"));
+    dispatch(statusBarActions.setPrimaryStatus("menu"));
     setIsMenuOpen((prev) => !prev);
   };
 
-  const menuItemClickHandler = (to: string, slug: string) => {
+  const menuItemClickHandler = (to: string) => {
     navigate(to);
-    dispatch(navigationActions.setScreen(slug));
     setIsMenuOpen((prev) => !prev);
   };
 

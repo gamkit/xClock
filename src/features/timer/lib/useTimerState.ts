@@ -1,10 +1,14 @@
-import { useState } from "react";
-import { useAppDispatch, useAppSelector } from "@/shared/lib/redux/hooks";
-import { getTimerBySlotValue } from "@/shared/lib/getTimerBySlotValue";
+import { useEffect, useState } from "react";
+import {
+  useAppDispatch,
+  useAppSelector,
+  getTimerBySlotValue,
+} from "@/shared/lib";
+import { statusBarActions } from "@/features/status-bar";
 import { selectTimerSlots } from "../model/selector";
 import { timerActions } from "../model/slice";
-import { useTimer } from "../lib/useTimer";
 import { TTimerSlotItem } from "../model/types";
+import { useTimer } from "../lib/useTimer";
 
 type TModalSlotAction = "create" | "delete" | "edit" | "default";
 
@@ -119,15 +123,27 @@ export const useTimerState = () => {
   const handleStart = () => {
     start();
     dispatch(timerActions.setTimerStatus("running"));
+    dispatch(statusBarActions.setProcessing(true));
+    dispatch(statusBarActions.setPrimaryStatus("processing"));
   };
+  
   const handlePause = () => {
     pause();
     dispatch(timerActions.setTimerStatus("paused"));
+    dispatch(statusBarActions.setPrimaryStatus("suspended"));
   };
+
   const handleStop = () => {
     stop();
     dispatch(timerActions.setTimerStatus("waiting"));
+    dispatch(statusBarActions.setPrimaryStatus("timer"));
+    dispatch(statusBarActions.setProcessing(false));
   };
+
+  useEffect(() => {
+    dispatch(statusBarActions.setPrimaryStatus("timer"));
+    dispatch(statusBarActions.setSecondaryStatus("timer"));
+  }, []);
 
   return {
     min,

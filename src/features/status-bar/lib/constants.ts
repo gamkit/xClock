@@ -4,4 +4,7 @@ export enum EStatusLabels {
   "stopwatch" = "Секундомер",
   "settings" = "Настройки",
   "menu" = "Меню",
+  "processing" = "Запущен",
+  "suspended" = "Приостановлен",
+  "default" = "",
 }
