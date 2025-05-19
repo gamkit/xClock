@@ -1,9 +1,10 @@
 import { Routes, Route } from "react-router-dom";
+import { AppFrame } from "./providers/AppFrame";
+import { StatusBar } from "@/features/status-bar";
 import HomePage from "@/pages/home";
 import TimerPage from "@/pages/timer";
 import StopwatchPage from "@/pages/stopwatch";
-import { StatusBar } from "@/features/status-bar";
-import { AppFrame } from "./providers/AppFrame";
+import SettingsPage from "@/pages/settings";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/clock" element={<HomePage />} />
           <Route path="/timer" element={<TimerPage />} />
           <Route path="/stopwatch" element={<StopwatchPage />} />
+          <Route path="/settings" element={<SettingsPage />} />
         </Routes>
       </AppFrame>
       <div className="modals-portal"></div>

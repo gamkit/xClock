@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { navigationReducer } from "@/features/navigation/model/slice";
 import { timerReducer } from "@/features/timer/model/slice";
+import { statusBarReducer } from "@/features/status-bar/model/slice";
 
 export const store = configureStore({
   reducer: {
-    navigation: navigationReducer,
     timer: timerReducer,
+    statusBar: statusBarReducer,
   },
 });
 

@@ -3,12 +3,8 @@ import { RootState } from "@/shared/lib/redux/types";
 
 const selectTimerState = (state: RootState) => state.timer;
 
-export const selectTimerSlots = createSelector(
-  [selectTimerState],
-  (timer) => timer.slots
-);
+const createTimerSelector = <K extends keyof RootState["timer"]>(key: K) =>
+  createSelector([selectTimerState], (timer) => timer[key]);
 
-export const selectTimerStatus = createSelector(
-  [selectTimerState],
-  (timer) => timer.status
-);
+export const selectTimerSlots = createTimerSelector("slots");
+export const selectTimerStatus = createTimerSelector("status");

@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
+import { useAppDispatch } from "@/shared/lib";
+import { statusBarActions } from "@/features/status-bar";
 import { DAY_NAMES, MONTH_NAMES } from "@/shared/config";
 
 export const useCurrentTime = () => {
   const [time, setTime] = useState(() => new Date());
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     const updateTime = () => {
@@ -29,6 +32,11 @@ export const useCurrentTime = () => {
       clearTimeout(timer);
       document.removeEventListener("visibilitychange", visibilityChangeHandler);
     };
+  }, []);
+
+  useEffect(() => {
+    dispatch(statusBarActions.setPrimaryStatus("clock"));
+    dispatch(statusBarActions.setSecondaryStatus("clock"));
   }, []);
 
   return {

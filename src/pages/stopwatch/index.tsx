@@ -1,10 +1,11 @@
+import { Stopwatch } from "@/features/stopwatch";
+
 const StopwatchPage = () => {
-    return (
-      <>
-        <h1>Stopwatch Page is showing stopwatch</h1>
-      </>
-    );
-  };
-  
-  export default StopwatchPage;
-  
+  return (
+    <>
+      <Stopwatch />
+    </>
+  );
+};
+
+export default StopwatchPage;
