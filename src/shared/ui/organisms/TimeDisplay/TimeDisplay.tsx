@@ -1,15 +1,17 @@
+import classNames from "classnames";
 import { Digit } from "@/shared/ui";
-import styles from "./Digits.module.scss";
+import styles from "./TimeDisplay.module.scss";
 
-interface DigitsProps {
+interface ITimeDisplayProps {
   min: string;
   sec: string;
   ms: string;
+  className?: string;
 }
 
-export const Digits = ({ min, sec, ms }: DigitsProps) => {
+export const TimeDisplay = ({ min, sec, ms, className }: ITimeDisplayProps) => {
   return (
-    <div className={styles["digits"]}>
+    <div className={classNames(className, styles["digits"])}>
       <Digit size="sm" tAlign="right">
         {min}
       </Digit>

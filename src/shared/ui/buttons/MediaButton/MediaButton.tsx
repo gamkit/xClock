@@ -19,6 +19,14 @@ const mediaIconsMap: Record<TMediaAction, ReactNode> = {
   reset: <Cross size={42} />,
 };
 
+const mediaButtonTitleMap: Record<TMediaAction, string> = {
+  play: "Запуск",
+  pause: "Пауза",
+  stop: "Стоп",
+  interval: "Интервал",
+  reset: "Сброс",
+};
+
 export const MediaButton = ({
   action,
   className,
@@ -33,6 +41,7 @@ export const MediaButton = ({
         [styles["media-button--interval"]]: action === "interval",
         [styles["media-button--reset"]]: action === "reset",
       })}
+      title={mediaButtonTitleMap[action]}
       {...props}
     >
       {mediaIconsMap[action]}

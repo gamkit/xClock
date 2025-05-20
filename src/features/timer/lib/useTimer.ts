@@ -39,6 +39,7 @@ export const useTimer = (initialTime: number) => {
 
       animationFrame.current = requestAnimationFrame(updateTimer);
     };
+    
     animationFrame.current = requestAnimationFrame(updateTimer);
 
     return () => {

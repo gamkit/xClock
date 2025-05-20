@@ -1,15 +1,15 @@
+// Slot value 30:00:00 -> 1800000 (30 минут)
 export const getTimerBySlotValue = (value: string) => {
-  // 00:10:00
-  if (value) {
-    let [min, sec, ms] = value.split(":").map((val) => Number(val));
+  if (!value) return 0;
 
-    min = min > 0 ? min * 60000 : 0;
-    sec = sec > 0 ? sec * 1000 : 0;
-    ms = ms > 0 ? ms * 1000 * 10 : 0;
+  const parts = value.split(":");
+  if (parts.length !== 3) return 0;
 
-    const result = min + sec + ms;
+  const min = Number(parts[0]) || 0;
+  const sec = Number(parts[1]) || 0;
+  const ms = Number(parts[2]) || 0;
 
-    return result;
-  }
-  return 0
+  if ([min, sec, ms].some(val => val < 0)) return 0;
+
+  return min * 60000 + sec * 1000 + ms;
 };

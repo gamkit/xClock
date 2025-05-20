@@ -11,3 +11,4 @@ export { Throbber } from "./Throbber";
 export { Digit } from "./Digit";
 export { Slot } from "./Slot";
 export { Modal } from "./Modal";
+export { TimeDisplay } from "./organisms/TimeDisplay";

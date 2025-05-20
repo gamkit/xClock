@@ -1,13 +1,13 @@
 import { Modal, Slot } from "@/shared/ui";
 import { TimerLayout } from "./ui/TimerLayout";
 import { Controls } from "./ui/Controls";
-import { Digits } from "./ui/Digits";
 import { Slots } from "./ui/Slots";
 import { ModalSlotCreate } from "./ui/ModalContent/ModalSlotCreate";
 import { ModalSlotEdit } from "./ui/ModalContent/ModalSlotEdit";
 import { ModalSlotDelete } from "./ui/ModalContent/ModalSlotDelete";
 import { TTimerSlotItem } from "./model/types";
 import { useTimerState } from "./lib/useTimerState";
+import { TimeDisplay } from "@/shared/ui/organisms/TimeDisplay/TimeDisplay";
 
 export const Timer = () => {
   const {
@@ -59,7 +59,7 @@ export const Timer = () => {
   return (
     <>
       <TimerLayout
-        digits={<Digits min={min} sec={sec} ms={ms} />}
+        digits={<TimeDisplay min={min} sec={sec} ms={ms} />}
         controls={
           <Controls
             timerStatus={timerStatus}

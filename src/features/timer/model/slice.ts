@@ -17,12 +17,6 @@ const initialState: TTimerState = {
       value: "00:01:00",
       isActive: false,
     },
-    {
-      id: 3,
-      title: "Таймер 2",
-      value: "00:10:00",
-      isActive: false,
-    },
   ],
   status: "waiting",
 };
