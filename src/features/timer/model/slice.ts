@@ -6,21 +6,21 @@ import { TTimerStatus } from "../lib/useTimer";
 const initialState: TTimerState = {
   slots: [
     {
-      id: 1,
+      id: nanoid(),
       title: "Перерыв",
       value: "30:00:00",
       isActive: true,
     },
     {
-      id: 2,
+      id: nanoid(),
       title: "Планка",
-      value: "00:01:00",
+      value: "01:20:00",
       isActive: false,
     },
     {
-      id: 3,
-      title: "Таймер 2",
-      value: "00:10:00",
+      id: nanoid(),
+      title: "Момент",
+      value: "00:01:00",
       isActive: false,
     },
   ],

@@ -6,14 +6,20 @@ import { useBurgerMenu } from "./lib/useBurgerMenu";
 import { navLinks } from "./lib/constants";
 
 export const AppFrame = ({ children }: { children: ReactNode }) => {
-  const { isMenuOpen, burgerClickHandler, menuItemClickHandler, location, timerStatus } =
-    useBurgerMenu();
+  const {
+    isMenuOpen,
+    burgerClickHandler,
+    menuItemClickHandler,
+    location,
+    timerStatus,
+    stopwatchStatus,
+  } = useBurgerMenu();
 
   return (
     <AppFrameLayout
       isMenuOpen={isMenuOpen}
       onBurgerClick={burgerClickHandler}
-      isBurgerBtnHide={timerStatus === "waiting"}
+      isBurgerBtnHide={timerStatus === "waiting" && stopwatchStatus === 'waiting'}
     >
       {isMenuOpen ? (
         <BurgerMenu
