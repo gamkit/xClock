@@ -39,6 +39,7 @@ export const useTimer = (initialTime: number) => {
 
       animationFrame.current = requestAnimationFrame(updateTimer);
     };
+    
     animationFrame.current = requestAnimationFrame(updateTimer);
 
     return () => {
@@ -51,6 +52,7 @@ export const useTimer = (initialTime: number) => {
       alert("Время вышло");
       stop();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [timeLeft, timerStatus]);
 
   const start = () => {

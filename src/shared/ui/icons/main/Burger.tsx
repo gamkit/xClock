@@ -7,7 +7,7 @@ const Burger = () => {
         <path
           fillRule="evenodd"
           clipRule="evenodd"
-          d="M0 4V0H36V4H0ZM0 14H36V10H0V14ZM0 24H36V20H0V24Z"
+          d="M6 16V12H42V16H6ZM6 26H42V22H6V26ZM6 36H42V32H6V36Z"
           fill="currentColor"
         />
       </g>
@@ -15,4 +15,4 @@ const Burger = () => {
   );
 };
 
-export default createSvg(Burger, "burger", "0 0 36 24");
+export default createSvg(Burger, "burger", '0 0 48 48');

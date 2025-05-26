@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { timerReducer } from "@/features/timer/model/slice";
-import { statusBarReducer } from "@/features/status-bar/model/slice";
+import { timerReducer } from "@/features/timer";
+import { statusBarReducer } from "@/features/status-bar";
+import { stopwatchReducer } from "@/features/stopwatch";
 
 export const store = configureStore({
   reducer: {
     timer: timerReducer,
     statusBar: statusBarReducer,
+    stopwatch: stopwatchReducer,
   },
 });
 

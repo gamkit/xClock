@@ -126,7 +126,7 @@ export const useTimerState = () => {
     dispatch(statusBarActions.setProcessing(true));
     dispatch(statusBarActions.setPrimaryStatus("processing"));
   };
-  
+
   const handlePause = () => {
     pause();
     dispatch(timerActions.setTimerStatus("paused"));
@@ -143,7 +143,15 @@ export const useTimerState = () => {
   useEffect(() => {
     dispatch(statusBarActions.setPrimaryStatus("timer"));
     dispatch(statusBarActions.setSecondaryStatus("timer"));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    if (timerStatus === "waiting") {
+      dispatch(timerActions.setTimerStatus("waiting"));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [timerStatus]);
 
   return {
     min,

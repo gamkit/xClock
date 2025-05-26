@@ -37,6 +37,7 @@ export const useCurrentTime = () => {
   useEffect(() => {
     dispatch(statusBarActions.setPrimaryStatus("clock"));
     dispatch(statusBarActions.setSecondaryStatus("clock"));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return {

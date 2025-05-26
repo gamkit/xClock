@@ -8,5 +8,6 @@ export const useSettingsState = () => {
   useEffect(() => {
     dispatch(statusBarActions.setPrimaryStatus("settings"));
     dispatch(statusBarActions.setSecondaryStatus("settings"));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 };

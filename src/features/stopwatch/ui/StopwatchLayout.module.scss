@@ -1,0 +1,16 @@
+.stopwatch__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  width: 100%;
+  padding: 32px;
+  overflow: hidden;
+}
+
+.stopwatch__intervals {
+  position: absolute;
+  top: 210px;
+  left: 32px;
+}
