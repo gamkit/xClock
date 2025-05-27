@@ -1,0 +1,26 @@
+.toaster {
+  font-family: $font-family-primary;
+  font-size: $font-size-s !important;
+  color: #fff !important;
+  width: 300px;
+  border-radius: 8px !important;
+  box-shadow: 0px 6px 14px rgba(45, 49, 66, 0.3) !important;
+  padding: 12px 16px !important;
+
+  [role="status"] {
+    justify-content: flex-start;
+  }
+
+  &.toaster--success {
+    background-color: rgba(
+      $color: $color-primary-green,
+      $alpha: 0.9
+    ) !important;
+    border: 2px solid $color-primary-white !important;
+  }
+
+  &.toaster--error {
+    background-color: rgba($color: $color-primary-red, $alpha: 0.9) !important;
+    border: 2px solid $color-primary-white !important;
+  }
+}
