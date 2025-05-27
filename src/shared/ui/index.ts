@@ -12,3 +12,4 @@ export { Digit } from "./Digit";
 export { Slot } from "./Slot";
 export { Modal } from "./Modal";
 export { TimeDisplay } from "./organisms/TimeDisplay";
+export { Toaster } from "./Toaster";

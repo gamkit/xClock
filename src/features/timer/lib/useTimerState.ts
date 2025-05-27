@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import {
   useAppDispatch,
   useAppSelector,
@@ -92,6 +93,7 @@ export const useTimerState = () => {
     if (_slot) {
       handleSelectSlotHandler(_slot.id, _slot.value);
     }
+    toast.success("Слот удален");
     handleCloseModal();
   };
 
@@ -107,6 +109,8 @@ export const useTimerState = () => {
         value,
       })
     );
+
+    toast.success("Слот успешно изменен");
     handleCloseModal();
   };
 
@@ -117,6 +121,8 @@ export const useTimerState = () => {
         value,
       })
     );
+
+    toast.success("Добавлен новый слот для таймера");
     handleCloseModal();
   };
 

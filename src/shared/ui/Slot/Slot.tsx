@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import styles from "./Slot.module.scss";
+import { SyntheticEvent } from "react";
 
 interface ISlotProps {
   id: string | number;
@@ -20,6 +21,16 @@ export const Slot = ({
   onEdit,
   onDelete,
 }: ISlotProps) => {
+  const handleEdit = (e: SyntheticEvent) => {
+    e.stopPropagation();
+    onEdit();
+  };
+
+  const handleDelete = (e: SyntheticEvent) => {
+    e.stopPropagation();
+    onDelete();
+  };
+
   return (
     <div
       className={classNames(classNames, styles["slot"], {
@@ -32,10 +43,10 @@ export const Slot = ({
       <p className={styles["slot-title"]}>{title}</p>
       <p className={styles["slot-value"]}>{value}</p>
       <div className={styles["slot-controls"]}>
-        <button onClick={onEdit} title="Изменить">
+        <button onClick={handleEdit} title="Изменить">
           ✏️
         </button>
-        <button onClick={onDelete} title="Удалить">
+        <button onClick={handleDelete} title="Удалить">
           ❌
         </button>
       </div>
