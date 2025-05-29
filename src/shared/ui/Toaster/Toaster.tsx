@@ -8,11 +8,11 @@ export const Toaster = ({ toastOptions, ...props }: ToasterProps) => {
       toastOptions={{
         success: {
           className: classNames(styles["toaster"], styles["toaster--success"]),
-          duration: 110000,
+          duration: 3000,
         },
         error: {
           className: classNames(styles["toaster"], styles["toaster--error"]),
-          duration: 110000,
+          duration: 3000,
         },
         ...toastOptions,
       }}

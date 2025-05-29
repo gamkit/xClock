@@ -122,7 +122,7 @@ export const useTimerState = () => {
       })
     );
 
-    toast.success("Добавлен новый слот для таймера");
+    toast.success("Добавлен новый слот");
     handleCloseModal();
   };
 

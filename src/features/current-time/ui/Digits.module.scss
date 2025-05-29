@@ -1,29 +1,31 @@
 .digits {
-  position: relative;
-  font-size: 234px;
-  font-family: $font-family-secondary;
-  font-weight: $font-secondary-medium;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 129px;
-
-  > p {
-    margin: 0;
-    width: 308px;
-
-    &:first-child {
-      text-align: right;
-    }
-  }
+  gap: 34px;
+  gap: 34px;
 }
 
-.delimiter {
-  position: absolute;
-  left: calc(50% - 34px / 2);
+.digits__digit-item {
+  width: 340px;
+  height: 250px;
+  font-size: 214px;
+  background-color: rgba($color: $color_secondary_black, $alpha: 0.08);
+  border-radius: 24px;
+  border: 2px solid rgba($color: $color_secondary_black, $alpha: 0.2);
+  font-family: $font-family-secondary;
+  font-weight: $font-secondary-medium;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.digits__delimiter {
   display: flex;
+  justify-content: center;
+  justify-items: center;
   flex-direction: column;
-  gap: 44px;
+  gap: 40px;
+  width: 28px;
+  height: 88px;
   animation-name: delimiter-animation;
   animation-duration: 1s;
   animation-timing-function: ease;
@@ -32,10 +34,10 @@
   &::after,
   &:before {
     content: "";
-    width: 34px;
-    height: 34px;
+    width: 28px;
+    height: 24px;
     background-color: $color-primary-gray;
-    border-radius: 3px;
+    border-radius: 8px;
   }
 }
 

@@ -1,9 +1,17 @@
 import { ReactNode } from "react";
 import { BurgerMenu, MenuItem } from "@/shared/ui";
-import { Info } from "@/shared/ui/icons/main";
+import { Settings } from "@/shared/ui/icons/main";
+import { Clock, Hourglass, Stopwatch } from "@/shared/ui/icons/time";
 import { AppFrameLayout } from "./ui/AppFrameLayout";
 import { useBurgerMenu } from "./lib/useBurgerMenu";
 import { navLinks } from "./lib/constants";
+
+const iconsMap: Record<string, ReactNode> = {
+  clock: <Clock />,
+  timer: <Hourglass />,
+  stopwatch: <Stopwatch />,
+  settings: <Settings />,
+};
 
 export const AppFrame = ({ children }: { children: ReactNode }) => {
   const {
@@ -19,7 +27,9 @@ export const AppFrame = ({ children }: { children: ReactNode }) => {
     <AppFrameLayout
       isMenuOpen={isMenuOpen}
       onBurgerClick={burgerClickHandler}
-      isBurgerBtnHide={timerStatus === "waiting" && stopwatchStatus === 'waiting'}
+      isBurgerBtnHide={
+        timerStatus === "waiting" && stopwatchStatus === "waiting"
+      }
     >
       {isMenuOpen ? (
         <BurgerMenu
@@ -32,7 +42,7 @@ export const AppFrame = ({ children }: { children: ReactNode }) => {
                   onClick={() => menuItemClickHandler(link.path)}
                   label={link.label}
                   isActive={location.pathname === link.path}
-                  Icon={<Info />}
+                  Icon={iconsMap[link.id]}
                 />
               ))}
             </>

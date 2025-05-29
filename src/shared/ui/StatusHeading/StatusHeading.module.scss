@@ -1,16 +1,17 @@
 .status-heading {
   font-weight: $font-primary-bold;
-  margin: 12px 0;
   text-align: center;
-  gap: 140px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 12px 0;
 }
 
 .status-heading--active {
-  color: $color-primary-red;
+  color: $color-primary-white;
 }
 
 .status-heading--processing {
-  color: $color-primary-gray;
+  color: $color-primary-green;
 }
 
 .status-heading--size-sm {
@@ -18,5 +19,5 @@
 }
 
 .status-heading--size-lg {
-  font-size: $font-size-xxl;
+  font-size: $font-size-xl;
 }
