@@ -8,14 +8,14 @@
   width: 90px;
   height: 48px;
   background-color: $color-secondary-white;
-  border: 1px solid $color-primary-gray;
+  border: 1px solid rgba($color: $color-primary-gray, $alpha: 0.1);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   border-radius: 6px;
   user-select: none;
   cursor: pointer;
 
   &.slot--active {
-    background-color: $color-primary-black;
+    background-color: $color-secondary-black;
 
     & > * {
       color: $color-primary-white;
@@ -31,7 +31,8 @@
 
 .slot-title {
   font-size: $font-size-xs;
-  color: $color-secondary-red;
+  font-weight: $font-primary-medium;
+  color: $color-primary-red;
   margin: 0;
   text-overflow: ellipsis;
   white-space: nowrap;

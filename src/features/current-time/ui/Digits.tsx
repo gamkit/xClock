@@ -8,9 +8,9 @@ interface IDigitsProps {
 export const Digits = ({ hours, minutes }: IDigitsProps) => {
   return (
     <div className={styles["digits"]}>
-      <p>{hours}</p>
-      <span className={styles["delimiter"]}></span>
-      <p>{minutes}</p>
+      <div className={styles["digits__digit-item"]}>{hours}</div>
+      <div className={styles['digits__delimiter']}></div>
+      <div className={styles["digits__digit-item"]}>{minutes}</div>
     </div>
   );
 };

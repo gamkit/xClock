@@ -16,7 +16,13 @@ export const Slots = ({ children, onCreate, timerStatus }: ISlotsProps) => {
       {timerStatus === "waiting" && (
         <>
           {children}
-          <Button onClick={onCreate} rounded size="lg" Icon={<Add />} />
+          <Button
+            className={styles["slots__add-slot-btn"]}
+            onClick={onCreate}
+            rounded
+            size="lg"
+            Icon={<Add />}
+          />
         </>
       )}
     </div>

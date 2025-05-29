@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Button, Frame } from "@/shared/ui";
+import { Button } from "@/shared/ui";
 import { Burger, Cross } from "@/shared/ui/icons/main";
 import styles from "./AppFrameLayout.module.scss";
 
@@ -17,7 +17,7 @@ export const AppFrameLayout = ({
   onBurgerClick,
 }: IAppFrameLayoutProps) => {
   return (
-    <Frame backgroundColor={isMenuOpen ? "#fff" : undefined}>
+    <div className={styles['frame-container']}>
       {children}
       {isBurgerBtnHide && (
         <Button
@@ -27,6 +27,6 @@ export const AppFrameLayout = ({
           onClick={() => onBurgerClick()}
         />
       )}
-    </Frame>
+    </div>
   );
 };

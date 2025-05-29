@@ -19,7 +19,6 @@ export const MenuItem = ({ label, Icon, onClick, isActive }: IMenuProps) => {
         className={styles["menu-item__link-button"]}
         onClick={onClick}
         Icon={Icon}
-        rounded
       />
 
       <p className={styles["menu-item__title"]}>{label}</p>

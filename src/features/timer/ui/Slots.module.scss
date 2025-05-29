@@ -6,3 +6,15 @@
   width: 80%;
   text-align: center;
 }
+
+.slots__add-slot-btn {
+  background-color: $color-primary-blue;
+
+  > svg {
+    color: $color-primary-white;
+  }
+
+  &:hover {
+    background-color: $color-primary-blue;
+  }
+}
