@@ -3,7 +3,7 @@ import { BurgerMenu, MenuItem } from "@/shared/ui";
 import { Settings } from "@/shared/ui/icons/main";
 import { Clock, Hourglass, Stopwatch } from "@/shared/ui/icons/time";
 import { AppFrameLayout } from "./ui/AppFrameLayout";
-import { useBurgerMenu } from "./lib/useBurgerMenu";
+import { useAppFrameState } from "./lib/useAppFrameState";
 import { navLinks } from "./lib/constants";
 
 const iconsMap: Record<string, ReactNode> = {
@@ -21,7 +21,7 @@ export const AppFrame = ({ children }: { children: ReactNode }) => {
     location,
     timerStatus,
     stopwatchStatus,
-  } = useBurgerMenu();
+  } = useAppFrameState();
 
   return (
     <AppFrameLayout

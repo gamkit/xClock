@@ -18,12 +18,10 @@ export const ModalSlotDelete = ({
         {slot.title}: <span>{slot.value}</span>
       </p>
       <div className={styles["btns-container"]}>
-        <Button className={styles["btn-confirm"]} onClick={onConfirm}>
+        <Button bType="accent" onClick={onConfirm}>
           Да
         </Button>
-        <Button className={styles["btn-cancel"]} onClick={onCancel}>
-          Отмена
-        </Button>
+        <Button onClick={onCancel}>Отмена</Button>
       </div>
     </div>
   );

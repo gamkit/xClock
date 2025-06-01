@@ -28,6 +28,7 @@ export const Button = ({
   return (
     <button
       className={classNames(className, styles["button"], {
+        [styles["button--type-accent"]]: bType === "accent",
         [styles["button--type-action"]]: bType === "action",
         [styles["button--type-outline"]]: bType === "outline",
         [styles["button--type-ghost"]]: bType === "ghost",

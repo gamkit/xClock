@@ -41,13 +41,13 @@ export const ModalSlotEdit = ({
   return (
     <div className={styles["fields-wrapper"]}>
       <form onSubmit={handleSubmit(editSlot)}>
-      <TextField
-        label="Название таймера"
-        isFullWidth
-        defaultValue={slot.title}
-        errorMessage={errors.title?.message}
-        {...register("title", { required: true })}
-      />
+        <TextField
+          label="Название таймера"
+          isFullWidth
+          defaultValue={slot.title}
+          errorMessage={errors.title?.message}
+          {...register("title", { required: true })}
+        />
         <div className={styles["digit-fields"]}>
           <TextField
             label="Мин"
@@ -77,15 +77,10 @@ export const ModalSlotEdit = ({
           />
         </div>
         <div className={styles["btns-container"]}>
-          <Button
-            className={styles["btn-confirm"]}
-            disabled={!isDirty || !isValid}
-          >
+          <Button bType="accent" disabled={!isDirty || !isValid}>
             Готово
           </Button>
-          <Button className={styles["btn-cancel"]} onClick={onCancel}>
-            Отмена
-          </Button>
+          <Button onClick={onCancel}>Отмена</Button>
         </div>
       </form>
     </div>

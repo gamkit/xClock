@@ -7,7 +7,7 @@
   gap: 2px;
   width: 90px;
   height: 48px;
-  background-color: $color-secondary-white;
+  background-color: var(--secondary-bg);
   border: 1px solid rgba($color: $color-primary-gray, $alpha: 0.1);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   border-radius: 6px;
@@ -15,7 +15,7 @@
   cursor: pointer;
 
   &.slot--active {
-    background-color: $color-secondary-black;
+    background-color: var(--primary-accent);
 
     & > * {
       color: $color-primary-white;
@@ -32,7 +32,7 @@
 .slot-title {
   font-size: $font-size-xs;
   font-weight: $font-primary-medium;
-  color: $color-primary-red;
+  color: var(--secondary-text);
   margin: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -42,7 +42,7 @@
 
 .slot-value {
   font-size: $font-size-s;
-  color: $color-primary-black;
+  color: var(--secondary-text);
   margin: 0;
 }
 
