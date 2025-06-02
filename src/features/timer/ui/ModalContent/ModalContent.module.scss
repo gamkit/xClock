@@ -4,22 +4,12 @@
   margin-top: 36px;
 }
 
-.btn-confirm {
-  background-color: $color-primary-green;
-  color: $color-secondary-white;
-}
-
-.btn-cancel {
-  background-color: $color-primary-red;
-  color: $color-secondary-white;
-}
-
 .slot-title {
   font-size: $font-size-l;
   color: $color-primary-red;
 
   > span {
-    color: $color-primary-black;
+    color: var(--primary-text);
   }
 }
 

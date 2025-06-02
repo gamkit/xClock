@@ -67,15 +67,10 @@ export const ModalSlotCreate = ({
           />
         </div>
         <div className={styles["btns-container"]}>
-          <Button
-            className={styles["btn-confirm"]}
-            disabled={!isDirty || !isValid}
-          >
+          <Button bType="accent" disabled={!isDirty || !isValid}>
             Готово
           </Button>
-          <Button className={styles["btn-cancel"]} onClick={onCancel}>
-            Отмена
-          </Button>
+          <Button onClick={onCancel}>Отмена</Button>
         </div>
       </form>
     </div>

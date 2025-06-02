@@ -16,7 +16,7 @@ export const StatusBar = () => {
       primaryTextBar={
         <StatusHeading
           status={
-            isProcessing || primaryStatus === "menu" ? "processing" : "active"
+            isProcessing ? "processing" : "active"
           }
         >
           {EStatusLabels[primaryStatus]}

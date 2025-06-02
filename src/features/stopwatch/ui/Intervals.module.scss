@@ -4,6 +4,7 @@
   font-weight: $font-primary-semi-bold;
   font-size: $font-size-xxs;
   margin-left: 28px;
+  color: var(--primary-text);
 }
 
 .intervals__items {
@@ -28,6 +29,7 @@
     width: 20px;
     text-overflow: ellipsis;
     overflow: hidden;
+    color: var(--primary-text);
   }
 
   p:nth-child(2) {
@@ -40,6 +42,7 @@
   p:nth-child(3) {
     border-right: 1px solid $color-primary-gray;
     padding-right: 10px;
+    color: var(--primary-text);
   }
 
   p:nth-child(2),

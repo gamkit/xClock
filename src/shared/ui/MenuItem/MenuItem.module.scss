@@ -6,30 +6,31 @@
   gap: 38px;
 }
 
-.menu-item__title {
-}
-
 .menu-item__link-button {
   width: 114px;
   height: 114px;
   border-radius: 44px;
-  background-color: $color-secondary-black;
-  outline: 7px solid rgba($color: $color-secondary-black, $alpha: 0.15);
-  box-shadow: 0px 14px 14px rgba(58, 107, 143, 0.4);
+  background-color: var(--secondary-bg);
+  outline: 7px solid var(--menu-item-border-color);
+  box-shadow: var(--menu-item-box-shadow);
 
   & > svg {
     transform: scale(3);
     transform-origin: center;
-    color: $color-primary-white;
+    color: var(--primary-bg);
   }
 
   &:hover {
-    background-color: $color-primary-black;
+    background-color: var(--secondary-bg);
+
+    & > svg {
+      color: var(--primary-bg);
+    }
   }
 }
 
 .menu-item__title {
-  color: $color-primary-black;
+  color: var(--primary-text);
   text-decoration: none;
   font-size: $font-size-s;
   text-transform: uppercase;

@@ -1,7 +1,21 @@
 import { useSettingsState } from "./lib/useSettingsState";
+import { SettingsLayout } from "./ui/SettingsLayout";
+import { SettingsList } from "./ui/SettingsList";
 
 export const Settings = () => {
-  useSettingsState();
+  const { theme, timeFormat, handleChangeTheme, handleChangeTimeFormat } =
+    useSettingsState();
 
-  return <></>;
+  return (
+    <SettingsLayout
+      settingsList={
+        <SettingsList
+          currentTheme={theme}
+          currentTimeFormat={timeFormat}
+          onChangeTheme={handleChangeTheme}
+          onChangeTimeFormat={handleChangeTimeFormat}
+        />
+      }
+    />
+  );
 };

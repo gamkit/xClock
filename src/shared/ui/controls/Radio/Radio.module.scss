@@ -1,0 +1,76 @@
+.radio-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 15px;
+  user-select: none;
+  color: var(--primary-text);
+
+  &--dir-right {
+    flex-direction: row-reverse;
+  }
+
+  input[type="radio"] {
+    position: relative;
+    appearance: none;
+    border: 1px solid $color-secondary-black;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    margin: 0;
+    border-radius: 18px;
+    background-color: $color-primary-white;
+    transition: 0.2s ease-in;
+    outline: none;
+    box-sizing: border-box;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transform-origin: center;
+      opacity: 0;
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 18px;
+      background-color: $color-primary-black;
+      transition: 0.2s ease-in;
+    }
+
+    &:checked {
+      background-color: $color-primary-white;
+      border-color: $color-secondary-black;
+
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      background-color: $color-primary-white;
+      border-color: $color-primary-green;
+
+      &:before {
+        background-color: $color-primary-green;
+      }
+    }
+
+    &:disabled {
+      background-color: rgba($color: $color-primary-gray, $alpha: 0.5);
+      border-color: $color-primary-gray;
+      pointer-events: none;
+
+      &:before {
+        background-color: $color-primary-gray;
+      }
+
+      &:checked {
+        background-color: rgba($color: $color-primary-gray, $alpha: 0.5);
+        border-color: rgba($color: $color-primary-gray, $alpha: 0.5);
+      }
+    }
+  }
+}

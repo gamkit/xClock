@@ -41,5 +41,9 @@
 }
 
 .media-button--reset {
-  background-color: $color-primary-black;
+  background-color: var(--secondary-bg);
+
+  & > svg path {
+    fill: var(--primary-bg);
+  }
 }

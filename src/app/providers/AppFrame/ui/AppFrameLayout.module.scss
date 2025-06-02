@@ -1,11 +1,11 @@
 .frame-container {
   display: flex;
   position: relative;
-  background-color: $color-primary-white;
+  background-color: var(--primary-bg);
   box-shadow: $box-shadow;
   width: 912px;
   height: 432px;
-  border: 14px solid $color-primary-gray;
+  outline: 14px solid rgba($color: $color-primary-gray, $alpha: 0.4);
   border-radius: $outer-block-radius;
   box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.35);
 
@@ -17,12 +17,7 @@
     left: 0;
     top: 0;
     pointer-events: none;
-
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.35) 0%,
-      rgba(255, 255, 255, 0) 100%
-    );
+    background: var(--frame-blick);
     border-radius: 36px;
   }
 }

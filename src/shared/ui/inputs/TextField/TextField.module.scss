@@ -11,7 +11,7 @@
 
 .text-field__label {
   display: inline-block;
-  color: $color-primary-black;
+  color: var(--primary-text);
   font-size: $font-size-s;
   font-weight: $font-primary-medium;
   margin-top: 0;

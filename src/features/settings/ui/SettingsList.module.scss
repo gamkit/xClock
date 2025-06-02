@@ -1,0 +1,12 @@
+.settings-list__item {
+  p {
+    color: var(--primary-text);
+    font-size: $font-size-l;
+    font-weight: $font-secondary-semi-bold;
+  }
+}
+
+.settings-list__controls {
+    display: flex;
+    gap: 24px;
+}

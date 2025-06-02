@@ -1,6 +1,7 @@
 .date {
   font-size: $font-size-xl;
   font-weight: $font-primary-semi-bold;
+  color: var(--primary-text);
 
   > span {
     color: $color-primary-red;

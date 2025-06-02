@@ -2,16 +2,16 @@
   display: flex;
   align-items: center;
   gap: 34px;
-  gap: 34px;
 }
 
 .digits__digit-item {
   width: 340px;
   height: 250px;
   font-size: 214px;
-  background-color: rgba($color: $color_secondary_black, $alpha: 0.08);
+  color: var(--time-digits-text);
+  background-color: var( --time-digits-bg);
+  border: 2px solid var(--time-digits-border-color);
   border-radius: 24px;
-  border: 2px solid rgba($color: $color_secondary_black, $alpha: 0.2);
   font-family: $font-family-secondary;
   font-weight: $font-secondary-medium;
   text-align: center;

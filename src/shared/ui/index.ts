@@ -3,6 +3,7 @@
 export { StatusHeading } from "./StatusHeading";
 export { Button } from "./buttons/Button";
 export { TextField } from "./inputs/TextField";
+export { Radio } from "./controls/Radio";
 export { MediaButton } from "./buttons/MediaButton";
 export { BurgerMenu } from "./BurgerMenu";
 export { MenuItem } from "./MenuItem";
