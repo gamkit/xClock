@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .status-heading {
   font-weight: $font-primary-bold;
   text-align: center;
@@ -11,7 +13,7 @@
 }
 
 .status-heading--processing {
-  color: $color-primary-green;
+  color: color.adjust($color-primary-green, $lightness: 15%);
 }
 
 .status-heading--size-sm {
