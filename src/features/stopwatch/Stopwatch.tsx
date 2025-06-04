@@ -16,10 +16,11 @@ export const Stopwatch = () => {
     intervals,
     stopwatchStatus,
   } = useStopwatchState();
-  
+
   return (
     <>
       <StopwatchLayout
+        isAnimate={stopwatchStatus !== "waiting"}
         digits={<TimeDisplay min={min} sec={sec} ms={ms} />}
         controls={
           <Controls
@@ -35,6 +36,7 @@ export const Stopwatch = () => {
             <Intervals>
               {intervals.map((item) => (
                 <IntervalItem
+                  time={item.time}
                   key={item.id}
                   id={item.id}
                   lapTime={item.lapTime}

@@ -59,6 +59,7 @@ export const Timer = () => {
   return (
     <>
       <TimerLayout
+        isAnimate={timerStatus !== "waiting"}
         digits={<TimeDisplay min={min} sec={sec} ms={ms} />}
         controls={
           <Controls

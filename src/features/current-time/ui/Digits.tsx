@@ -1,4 +1,6 @@
+import { motion } from "motion/react";
 import styles from "./Digits.module.scss";
+import { clockDigitsVariants } from "../lib/constants";
 
 interface IDigitsProps {
   hours: string;
@@ -7,10 +9,10 @@ interface IDigitsProps {
 
 export const Digits = ({ hours, minutes }: IDigitsProps) => {
   return (
-    <div className={styles["digits"]}>
-      <div className={styles["digits__digit-item"]}>{hours}</div>
-      <div className={styles['digits__delimiter']}></div>
+    <motion.div className={styles["digits"]} {...clockDigitsVariants}>
+      <motion.div className={styles["digits__digit-item"]}>{hours}</motion.div>
+      <div className={styles["digits__delimiter"]}></div>
       <div className={styles["digits__digit-item"]}>{minutes}</div>
-    </div>
+    </motion.div>
   );
 };

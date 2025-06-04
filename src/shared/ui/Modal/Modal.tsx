@@ -4,6 +4,8 @@ import classNames from "classnames";
 import { Button } from "../buttons/Button";
 import { Cross } from "../icons/main";
 import styles from "./Modal.module.scss";
+import { motion } from "motion/react";
+import { modalWindowVariants } from "./lib/constants";
 
 interface IModalProps {
   children: ReactNode | ReactNode[];
@@ -58,7 +60,11 @@ export const Modal = ({
       onKeyDown={keyDownHandler}
       tabIndex={-1}
     >
-      <div className={styles["modal__window"]} data-id="modal">
+      <motion.div
+        className={styles["modal__window"]}
+        data-id="modal"
+        {...modalWindowVariants}
+      >
         <h2 className={styles["modal__title"]}>{title}</h2>
         {children}
         <Button
@@ -68,7 +74,7 @@ export const Modal = ({
           size="sm"
           onClick={onClose}
         />
-      </div>
+      </motion.div>
     </div>
   );
 

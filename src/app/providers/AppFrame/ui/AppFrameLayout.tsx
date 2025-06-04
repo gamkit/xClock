@@ -2,6 +2,8 @@ import { ReactNode } from "react";
 import { Button } from "@/shared/ui";
 import { Burger, Cross } from "@/shared/ui/icons/main";
 import styles from "./AppFrameLayout.module.scss";
+import { motion } from "motion/react";
+import { appFrameWapperVariants } from "../lib/constants";
 
 interface IAppFrameLayoutProps {
   children: ReactNode;
@@ -17,7 +19,7 @@ export const AppFrameLayout = ({
   onBurgerClick,
 }: IAppFrameLayoutProps) => {
   return (
-    <div className={styles['frame-container']}>
+    <div className={styles["frame-container"]}>
       {children}
       {isBurgerBtnHide && (
         <Button
@@ -30,3 +32,16 @@ export const AppFrameLayout = ({
     </div>
   );
 };
+
+export const AppFrameAnimationWrapper = ({
+  children,
+}: {
+  children: ReactNode;
+}) => (
+  <motion.div
+    className={styles["frame-animation-wrapper"]}
+    {...appFrameWapperVariants}
+  >
+    {children}
+  </motion.div>
+);

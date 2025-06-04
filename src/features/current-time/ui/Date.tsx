@@ -1,4 +1,6 @@
+import { motion } from "motion/react";
 import styles from "./Date.module.scss";
+import { clockDateVariants } from "../lib/constants";
 
 interface IDateProps {
   dayOfWeek: string;
@@ -7,8 +9,8 @@ interface IDateProps {
 
 export const Date = ({ date, dayOfWeek }: IDateProps) => {
   return (
-    <div className={styles["date"]}>
+    <motion.div className={styles["date"]} {...clockDateVariants}>
       {dayOfWeek}, <span>{date}</span>
-    </div>
+    </motion.div>
   );
 };
