@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import { motion } from "motion/react";
-import { Toaster } from "@/shared/ui";
 import { timeDigitsVariants } from "../lib/constants";
 import styles from "./TimerLayout.module.scss";
 
@@ -34,7 +33,6 @@ export const TimerLayout = ({
         {controls}
       </motion.div>
       <div className={styles["timer__slots"]}>{slots}</div>
-      <Toaster position="top-right" />
     </div>
   );
 };
