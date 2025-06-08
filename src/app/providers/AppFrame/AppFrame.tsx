@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { motion } from "motion/react";
-import { BurgerMenu, MenuItem } from "@/shared/ui";
+import { BurgerMenu, MenuItem, Toaster } from "@/shared/ui";
 import { Settings } from "@/shared/ui/icons/main";
 import { Clock, Hourglass, Stopwatch } from "@/shared/ui/icons/time";
 import { AppFrameAnimationWrapper, AppFrameLayout } from "./ui/AppFrameLayout";
@@ -58,6 +58,7 @@ export const AppFrame = ({ children }: { children: ReactNode }) => {
       ) : (
         <AppFrameAnimationWrapper>{children}</AppFrameAnimationWrapper>
       )}
+      <Toaster position="top-right"/>
     </AppFrameLayout>
   );
 };
