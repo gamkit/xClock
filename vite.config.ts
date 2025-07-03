@@ -15,4 +15,14 @@ export default defineConfig({
       },
     },
   },
+  test: {
+    globals: true, // Глобальный доступ к describe, test, expect
+    environment: 'jsdom', // Браузерное окружение
+    setupFiles: './src/setupTests.ts', // Файл с настройками
+    css: true, // Обработка CSS
+    coverage: {
+      provider: 'v8', // Или 'istanbul'
+      reporter: ['text', 'json', 'html'],
+    },
+  },
 });
